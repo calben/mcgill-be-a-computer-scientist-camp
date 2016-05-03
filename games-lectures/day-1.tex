@@ -1,6 +1,6 @@
 \documentclass[
 paper=128mm:96mm,
-fontsize=11pt,
+fontsize=12pt,
 pagesize,
 parskip=half-,
 ]{scrartcl}
@@ -12,7 +12,8 @@ parskip=half-,
 \usepackage[top=.25in, left=.5in, right=.5in, bottom=.5in]{geometry}
 \usepackage{minted}
 \newcommand{\slide}[1]{#1 \clearpage}
-\newcommand{\sectionslide}[1]{\slide{\hfill \vfill \section{#1}}}
+\newcommand{\sectionslide}[1]{\slide{\hfill \vfill \section{#1} \vspace{5em}}}
+\newcommand{\subsectionslide}[2]{\vspace*{1em}\slide{\subsection{#1} #2}}
 
 \title{Be A Computer Scientist: Game Programming}
 \author{Bendell, XX}
@@ -37,8 +38,8 @@ parskip=half-,
 \usepackage{titlesec}
 \usepackage{multicol}
 
-\titleformat*{\section}{\LARGE}
-\titleformat*{\subsection}{\Large}
+\titleformat*{\section}{\Large}
+\titleformat*{\subsection}{\large}
 
 \titlespacing*{\section}
 {0ex}{0ex}{0ex}
@@ -46,39 +47,110 @@ parskip=half-,
 {0ex}{0ex}{0ex}
 
 \begin{document}
-	\AddToShipoutPictureBG{\includegraphics[height=\paperheight]{gfx/background.jpg}}
+	
+    %\AddToShipoutPictureBG{\includegraphics[height=\paperheight]{gfx/background.jpg}}
+	
 	\slide
 	{
 		\maketitle	
 	}
 	
-	\sectionslide{Presenting Some Bullets}
+	\sectionslide{Programming Video Games}
 
-	\slide
+	\subsectionslide{Big Budget Games}
 	{
-		\subsection{title}
 		\begin{itemize}
-			\item Really interesting point number 1
-			\item Really interesting point number 2
-		\end{itemize}
+			\item Typically use a complicated game engine
+			\item Examples include Unreal Engine (Epic Games), Frostbite (EA), Anvil (Ubisoft)
+			\item I'll be showing a little about Unreal Engine
+			\item Made by many programmers, graphic designers, 3d modelers
+		\end{itemize}	
 	}
 	
-	\slide
-	{
-		{\large Picture here}
+	\subsectionslide{Our Game!}
+	{	
+		\vspace{4em}
 		\begin{center}
-			\includegraphics[width=.8\textwidth]{charts/test.pdf}
+			\begin{huge}
+				SPACE RACER
+			\end{huge}
 		\end{center}
 	}
 	
+	\subsectionslide{Our Schedule for the Week}
+	{
+		\begin{enumerate}
+			\item Learn basic programming
+			\item Explore 3D modeling
+			\item Learn about how the different parts of games fit together
+			\item Learn basic AI
+			\item Hold a competition!
+		\end{enumerate}
+	}
+	
+	\sectionslide{Basic Programming}
+	
+	\subsectionslide{What is proggramming?}
+	{
+		\begin{enumerate}
+			\item A computer follows instructions one by one
+			\item A \textit{program} is an instruction set
+			\item A program might take in \textit{input} from a user
+			\item A program often returns \textit{output} the user can see
+		\end{enumerate}	
+	}
+	
+	\subsectionslide{Machine Code}
+	{
+		\begin{itemize}
+			\item The computer reads \textit{machine code}
+			\item Machine code is hard to write and hard to read
+			\item Sometimes we use it for performance
+			\item For the most part, we run away from it because the "easy" version of it looks like...
+		\end{itemize}	
+	}
+	
 	\slide
 	{
-		\subsection{Source Code Listing}
-		{
-			\footnotesize
-			\inputminted{java}{code-snippets/task.java}
-		}
+		\begin{footnotesize}
+		\inputminted{nasm}{code-snippets/helloworld.nasm}
+		\end{footnotesize}
+
+	}
+	
+	\subsectionslide{Higher Level Languages}
+	{
+		\begin{itemize}
+			\item A higher level language lets you write code that gets converted to something the machine understands
+			\item The language may also check for errors for you
+			\begin{itemize}
+				\item Errors at \textit{compile time}
+				\item Errors at \textit{runtime}
+			\end{itemize}
+			\item Easier to understand, one of them looks like...
+		\end{itemize}
 	}
 
+	\slide
+	{
+		\vspace*{2em}
+		\inputminted{java}{code-snippets/helloworld.java}
+	}
+	
+	\subsectionslide{Java}
+	{
+		\begin{itemize}
+			\item High level programming language
+			\item Good choice if working on simple \textit{cross platform} programs
+			\item Is \textit{object oriented}
+			\item We will be using this language to do our programming
+			\item Can work from the \textit{command line}, but we're going to use an \textit{integrated developer environment}
+		\end{itemize}
+	}
+	
+	\subsectionslide{Pull Up "Scratch" File}
+	{
+		On your computer is a program called "scratch.java" that we will open in IntelliJ to learn about Java!
+	}
 	
 \end{document}

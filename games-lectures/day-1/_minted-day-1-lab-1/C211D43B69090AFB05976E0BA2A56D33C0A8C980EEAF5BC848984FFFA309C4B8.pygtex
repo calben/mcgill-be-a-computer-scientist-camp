@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class} \PYG{n+nc}{Scratch} \PYG{o}{\PYGZob{}}
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{main}\PYG{o}{(}\PYG{n}{String}\PYG{o}{[]} \PYG{n}{args}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+      \PYG{n}{bool} \PYG{n}{thisIsTrue} \PYG{o}{=} \PYG{l+m+mi}{19} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{18}\PYG{o}{;} \PYG{c+c1}{// comparison as in math}
+      \PYG{n}{bool} \PYG{n}{thisIsTrue} \PYG{o}{=} \PYG{l+m+mi}{18} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{19}\PYG{o}{;}
+      \PYG{n}{bool} \PYG{n}{thisIsTrue} \PYG{o}{=} \PYG{l+m+mi}{18} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{18}\PYG{o}{;}
+      \PYG{n}{bool} \PYG{n}{thisIsTrue} \PYG{o}{=} \PYG{l+m+mi}{19} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{18}\PYG{o}{;}
+
+      \PYG{k+kt}{int} \PYG{n}{a}\PYG{o}{;}
+      \PYG{k}{if} \PYG{o}{(}\PYG{k+kc}{true}\PYG{o}{)}
+      \PYG{o}{\PYGZob{}}
+        \PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{o}{;} \PYG{c+c1}{// this will always happen}
+      \PYG{o}{\PYGZcb{}}
+      \PYG{k}{if} \PYG{o}{(}\PYG{k+kc}{false}\PYG{o}{)}
+      \PYG{o}{\PYGZob{}}
+        \PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{6}\PYG{o}{;} \PYG{c+c1}{// this will never happen}
+      \PYG{o}{\PYGZcb{}}
+      \PYG{c+c1}{// so what\PYGZsq{}s the value of a?}
+
+      \PYG{k+kt}{int} \PYG{n}{shipYPosition} \PYG{o}{=} \PYG{l+m+mi}{200}\PYG{o}{;}
+      \PYG{k+kt}{int} \PYG{n}{asteroidYBoundary} \PYG{o}{=} \PYG{l+m+mi}{180}\PYG{o}{;}
+      \PYG{k}{if} \PYG{o}{(}\PYG{n}{shipYPosition} \PYG{o}{\PYGZgt{}} \PYG{n}{asteroidYPosition}\PYG{o}{)}
+        \PYG{k}{continue}\PYG{o}{;}
+      \PYG{k}{else}
+        \PYG{n}{ship}\PYG{o}{.}\PYG{n+na}{moveUp}\PYG{o}{();} \PYG{c+c1}{// tell our ship to get out of the way!}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

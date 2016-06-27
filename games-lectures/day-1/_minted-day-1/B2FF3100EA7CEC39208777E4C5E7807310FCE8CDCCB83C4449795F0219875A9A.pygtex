@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n}{aNumber} \PYG{o}{=} \PYG{l+m+mi}{54920}\PYG{o}{;}
+\PYG{k+kt}{double} \PYG{n}{aDecimalNumber} \PYG{o}{=} \PYG{l+m+mf}{43902.3290}\PYG{o}{;}
+\PYG{n}{String} \PYG{n}{aSentence} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Hello world!\PYGZdq{}}\PYG{o}{;}
+\PYG{k+kt}{char} \PYG{n}{ACharacter} \PYG{o}{=} \PYG{l+s+sc}{\PYGZsq{}c\PYGZsq{}}\PYG{o}{;}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{org}
+  \PYG{n+nf}{xor} \PYG{n+nb}{ax}\PYG{p}{,} \PYG{n+nb}{ax}
+  \PYG{n+nf}{mov} \PYG{n+nb}{ds}\PYG{p}{,} \PYG{n+nb}{ax}
+  \PYG{n+nf}{mov} \PYG{n+nb}{si}\PYG{p}{,} \PYG{n+nv}{msg}
+\PYG{n+nl}{boot\PYGZus{}loop:}\PYG{n+nf}{lodsb}
+  \PYG{n+nf}{or} \PYG{n+nb}{al}\PYG{p}{,} \PYG{n+nb}{al}
+  \PYG{n+nf}{jz} \PYG{n+nv}{go\PYGZus{}flag}
+  \PYG{n+nf}{mov} \PYG{n+nb}{ah}\PYG{p}{,} \PYG{l+m+mh}{0x0E}
+  \PYG{n+nf}{int} \PYG{l+m+mh}{0x10}
+  \PYG{n+nf}{jmp} \PYG{n+nv}{boot\PYGZus{}loop}
+\PYG{n+nl}{go\PYGZus{}flag:}
+  \PYG{n+nf}{jmp} \PYG{n+nv}{go\PYGZus{}flag}
+\PYG{n+nf}{msg}   \PYG{n+nv}{db} \PYG{l+s}{\PYGZdq{}hello world\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{13}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{0}
+  \PYG{k+kd}{times} \PYG{l+m+mi}{510}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{k+kc}{\PYGZdl{}}\PYG{o}{\PYGZhy{}}\PYG{k+kc}{\PYGZdl{}\PYGZdl{}}\PYG{p}{)} \PYG{n+nv}{db} \PYG{l+m+mi}{0}
+  \PYG{k+kd}{db} \PYG{l+m+mh}{0x55}
+  \PYG{k+kd}{db} \PYG{l+m+mh}{0xAA}
+\end{Verbatim}

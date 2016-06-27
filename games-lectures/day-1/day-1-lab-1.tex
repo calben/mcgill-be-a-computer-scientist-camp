@@ -1,0 +1,83 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[nochapters]{classicthesis}
+\usepackage{graphicx}
+\usepackage{abstract}
+\usepackage{amsmath}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{dirtree}
+\usepackage{minted}
+
+\renewcommand{\sffamily}{\rmfamily}
+
+\usepackage[top=1.25in, left=0.75in, right=0.75in, bottom=1.25in]{geometry}
+\usepackage{multicol}
+\setlength\columnsep{2em} % This is the default columnsep for all pages
+
+\usepackage{hyperref}
+\hypersetup{
+    pdfborder = {0 0 0},
+    colorlinks,
+    citecolor=Maroon,
+    filecolor=Darkgreen,
+    linkcolor=Cyan 
+}
+
+\title{Day 1 Programming Exercises}
+\author{Game Dev Camp}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Variables and Types}
+	
+	\subsection{Using the Right Types}
+	
+		Write a program that stores the following values with the right types:
+		
+		\begin{enumerate}
+			\item 127
+			\item 127.0
+			\item "All generalizations are dangerous, even this one."
+			\item true
+		\end{enumerate}
+	
+	\subsection{This Then That}
+	
+		You thought you had a favourite number, but now you're not so sure.
+		Make a number called "myFavourite."
+		Then change it to something else.
+		
+	\section{Basic Math}
+	
+		Here's a reminder of basic math in Java:
+		
+		\inputminted{java}{code-snippets/math.java}
+		
+		Write a program that makes a number count down from 10 to 0 by reassigning the number.
+		
+	\section{If Statements}
+	
+		\inputminted{java}{code-snippets/ifstatements.java}
+		
+		Your ship is 10 units tall.
+		An asteroid is 40 units tall.
+		Both a ship and an asteroid have a center, given to you as shipYPosition and asteroidYPosition.
+		How would you tell a ship to dodge in the direction that requires the least movement?
+		That is to say if the ship is a little lower than the asteroid, it should dodge beneath it.
+		If the ship is a little higher than the asteroid, it should dodge above it.
+		If it isn't going to hit the asteroid, the ship doesn't need to move.
+		
+	\section{Printing Things to the Screen}
+	
+		You can print things to the screen by doing the following:
+		
+		\inputminted{java}{code-snippets/screenprinting.java}
+		
+		Make another countdown from 10 to 0, but this time have it print to screen!
+	
+\end{document}

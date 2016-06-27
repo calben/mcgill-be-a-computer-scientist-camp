@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n}{five}\PYG{o}{;} \PYG{c+c1}{// tells the computer to make space}
+            \PYG{c+c1}{// for a number we called number}
+
+\PYG{n}{five} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{o}{;} \PYG{c+c1}{// now the value of the \PYGZdq{}five\PYGZdq{} is 0}
+\PYG{n}{five} \PYG{o}{=} \PYG{l+m+mi}{6}\PYG{o}{;} \PYG{c+c1}{// now it\PYGZsq{}s 6....}
+\PYG{n}{five} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{o}{;} \PYG{c+c1}{// let\PYGZsq{}s change it back to 5}
+\end{Verbatim}
